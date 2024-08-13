@@ -1,0 +1,50 @@
+/* Base styles for the button */
+.transform_button {
+    background: #fff; /* Background color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    cursor: pointer; /* Change cursor to pointer */
+    outline: none; /* Remove default outline */
+    position: relative; /* Needed for absolute positioning of inner elements */
+    overflow: hidden; /* Hide overflow of inner elements */
+  }
+  
+  /* Styles for the content inside the button */
+  .button_content {
+    display: flex; /* Align children in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    position: relative; /* Relative positioning for transform effects */
+    transform: translate3d(-3px, -3px, 0px) 
+                scale3d(1, 1, 1) 
+                rotateX(0deg) 
+                rotateY(0deg) 
+                rotateZ(0deg) 
+                skew(0deg, 0deg);
+    transform-style: preserve-3d; /* Preserve 3D transforms */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+  }
+  
+  /* Optional hover effect */
+  .transform_button:hover .button_content {
+    transform: translate3d(0px, 0px, 0px) 
+                scale3d(1.1, 1.1, 1) 
+                rotateX(0deg) 
+                rotateY(0deg) 
+                rotateZ(0deg) 
+                skew(0deg, 0deg);
+  }
+  
+  /* Styling for the SVG icon */
+  .btn_icon {
+    width: 24px; /* Width of the SVG */
+    height: 24px; /* Height of the SVG */
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  /* Styling for the button label */
+  .button_label {
+    font-size: 14px; /* Font size for the button text */
+    color: #333; /* Text color */
+  }
+  
